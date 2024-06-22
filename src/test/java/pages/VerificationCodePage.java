@@ -10,18 +10,18 @@ public class VerificationCodePage {
     private SelenideElement verifyButton = $("[data-test-id='action-verify']");
     private SelenideElement invalidNotificationText = $("[data-test-id='error-notification'] .notification__content");
 
-    public VerificationCodePage () {
+    public VerificationCodePage() {
         verifyButton.shouldBe(Condition.visible);
     }
 
-    public DashboardPage validCodeEnter (String code) {
+    public DashboardPage validCodeEnter(String code) {
         codeField.setValue(code);
         verifyButton.click();
 
         return new DashboardPage();
     }
 
-    public void invalidCodeEnter (String code) {
+    public void invalidCodeEnter(String code) {
         codeField.setValue(code);
         verifyButton.click();
 

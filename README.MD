@@ -1,1 +1,1 @@
-# Java Autotests SQL Netology
+# Java Autotests SQL Netology [![Java CI with Gradle](https://github.com/dadosha/Java_SQl_1/actions/workflows/gradle.yml/badge.svg)](https://github.com/dadosha/Java_SQl_1/actions/workflows/gradle.yml)

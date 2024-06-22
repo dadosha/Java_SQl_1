@@ -25,7 +25,7 @@ public class LoginTest {
 
     @Test
     @DisplayName("Successful login")
-    void shouldSuccessfulLogin () {
+    void shouldSuccessfulLogin() {
         var userInfo = DataHelper.getCorrectUserLogInInfo();
         var verificationPage = loginPage.validLogin(userInfo.getLogin(), userInfo.getPassword());
         verificationPage.validCodeEnter(getCode());
@@ -33,14 +33,14 @@ public class LoginTest {
 
     @Test
     @DisplayName("Unsuccessful login")
-    void shouldUnsuccessfulLogin () {
+    void shouldUnsuccessfulLogin() {
         var userInfo = DataHelper.generateUser();
         loginPage.invalidLogin(userInfo.getLogin(), userInfo.getPassword());
     }
 
     @Test
     @DisplayName("Incorrect code")
-    void shouldUnsuccessfulCode () {
+    void shouldUnsuccessfulCode() {
         var userInfo = DataHelper.getCorrectUserLogInInfo();
         var verificationPage = loginPage.validLogin(userInfo.getLogin(), userInfo.getPassword());
         verificationPage.invalidCodeEnter(DataHelper.generateCode());
@@ -48,7 +48,7 @@ public class LoginTest {
 
     @Test
     @DisplayName("If the password is entered incorrectly three times, the system is locked out")
-    void shouldBlockedUser () {
+    void shouldBlockedUser() {
         var userInfo = DataHelper.generatePasswordForUser();
         loginPage.invalidLoginThreeTimes(userInfo.getLogin(), userInfo.getPassword());
 

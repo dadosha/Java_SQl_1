@@ -27,15 +27,15 @@ public class DataHelper {
     }
 
     public static UserInfo generateUser() {
-        return new UserInfo(generateId() ,generateName(), generatePassword());
+        return new UserInfo(generateId(), generateName(), generatePassword());
     }
 
     public static UserInfo generatePasswordForUser() {
-        return new UserInfo("b101c113-875c-4b03-a988-8b554de4a642","petya", generatePassword());
+        return new UserInfo("b101c113-875c-4b03-a988-8b554de4a642", "petya", generatePassword());
     }
 
     public static UserInfo getCorrectUserLogInInfo() {
-        return new UserInfo("c690a106-a570-4aa6-a19d-bde280489511","vasya", "qwerty123");
+        return new UserInfo("c690a106-a570-4aa6-a19d-bde280489511", "vasya", "qwerty123");
     }
 
     public static String generateCode() {
