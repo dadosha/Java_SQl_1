@@ -14,16 +14,19 @@ public class VerificationCodePage {
         verifyButton.shouldBe(Condition.visible);
     }
 
-    public DashboardPage validCodeEnter(String code) {
+    private void makeValidCode(String code) {
         codeField.setValue(code);
         verifyButton.click();
+    }
+
+    public DashboardPage validCodeEnter(String code) {
+        makeValidCode(code);
 
         return new DashboardPage();
     }
 
     public void invalidCodeEnter(String code) {
-        codeField.setValue(code);
-        verifyButton.click();
+        makeValidCode(code);
 
         invalidNotificationText.shouldHave(Condition.text("Ошибка! Неверно указан код! Попробуйте ещё раз.")).shouldBe(Condition.visible);
     }
